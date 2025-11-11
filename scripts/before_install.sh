@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#_Change_Working_Directory
+# 1. Change working directory
 cd /home/ec2-user/server
 
-#_Update_&_Set_Node_Version
-curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+# 2. Update & Set Node Version (use Node 18)
+curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -
 
-#_Download_Node_&NPM
-yum -y install nodejs npm
+# 3. Install Node & NPM
+sudo yum -y install nodejs
 
-#_Download_PM2
-npm install pm2@latest -g
+# 4. Install PM2 globally
+sudo npm install pm2@latest -g
